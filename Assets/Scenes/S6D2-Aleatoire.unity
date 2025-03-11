@@ -531,7 +531,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f529efda695135646856a6a2f3d47cb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _distanceMaximale: 0.7
+  _distanceMaximale: 0.8
 --- !u!4 &607131713
 Transform:
   m_ObjectHideFlags: 0
@@ -557,6 +557,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 607821547}
+  - component: {fileID: 607821548}
   m_Layer: 0
   m_Name: Champignons
   m_TagString: Untagged
@@ -580,6 +581,18 @@ Transform:
   - {fileID: 2137738002}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &607821548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607821546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 947c322bf52f3ed41b06be52e10fcadb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &624779726
 PrefabInstance:
   m_ObjectHideFlags: 0
