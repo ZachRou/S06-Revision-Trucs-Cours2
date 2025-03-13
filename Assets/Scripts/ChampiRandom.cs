@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-/* public class ChampiRandom : MonoBehaviour
+ public class ChampiRandom : MonoBehaviour
 {
-    // Start is called before the first frame update
+ /* // Start is called before the first frame update
 
     void Start()
     {
@@ -19,5 +19,23 @@ using UnityEngine;
 
 
         }
-    }   
-}*/
+    } */
+
+    [SerializeField] private GameObject Champignons;  
+    [SerializeField] private Transform BGL;           
+    [SerializeField] private Transform BGL3;          
+
+    void Start()
+    {
+        float randomChance = Random.value;
+
+        if (randomChance > 0.5f)
+        {
+            Instantiate(Champignons,BGL.position, Quaternion.identity);
+        }
+        else 
+        {
+            Instantiate(Champignons,BGL3.position, Quaternion.identity); 
+        }
+    }
+}
