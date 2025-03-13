@@ -9,26 +9,33 @@ public class CreationAvecDelai : MonoBehaviour
 
     void Start()
     {
-        // Éxecute la méthode CreerObjet après un délai de 5s
-        Invoke("CreerObjet", 5f);
-        // Éxecute la méthode CreerObjet après un délai initiale de 3s et à chaque 1s après
+        // execute la methode CreerObjet apres un delai de 5s
+        //Invoke("CreerObjet", 5f);
+        // execute la methode CreerObjet apres un delai initiale de 3s et e chaque 1s apres
         InvokeRepeating("CreerObjet", 3f, 1f);
         // Cancelle tous les Invoke() actifs
+        //CancelInvoke();
+
+    }
+
+    
+    public void ArreterMonnaie()
+    {
         CancelInvoke();
     }
 
     void CreerObjet()
     {
-        // Instancie un nouveau objet et garde une référence à lui
+        // Instancie un nouveau objet et garde une reference Ã  lui
         GameObject nouvelleCopie = Instantiate(_objetACreer, _objetPlacemenent.transform.position, _objetPlacemenent.transform.rotation);
 
-        // Prends une référence a le Rigidbody attaché au nouveau objet
+        // Prends une reference a le Rigidbody attache au nouveau objet
         Rigidbody _rbNouvelleCopie = nouvelleCopie.GetComponent<Rigidbody>();
 
-        // Applique une force de translation initiale aléatoire
+        // Applique une force de translation initiale aleatoire
         _rbNouvelleCopie.AddRelativeForce(0, 2f + Random.value, 0, ForceMode.Impulse);
 
-        // Applique une force de rotation initiale aléatoire
+        // Applique une force de rotation initiale aleatoire
         _rbNouvelleCopie.AddRelativeTorque(0f, Random.value, Random.value, ForceMode.Impulse);
     }
 }
