@@ -9,7 +9,7 @@ public class CreationAvecDelaiEtRepetition : MonoBehaviour
 
     void Start()
     {
-        InvokeRepeating("CreerObjet", 3f, 1f);
+        Invoke("CreerObjet", 3f, 1f);
     }
 
     void CreerObjet()
